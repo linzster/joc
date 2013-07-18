@@ -1,4 +1,6 @@
 A Symfony Project: Judith Cofer's New Website
+
+Started Summer 2013
 ========================
 
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
