@@ -1,0 +1,32 @@
+{% extends 'TestPublicationsBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Books list</h1>
+
+    <div class="container">
+
+        {% for entity in entities %}
+<div class="featurette"><a href="{{ path('books_show', { 'id': entity.id }) }}"{% if entity.photurl != '' %}<img .../><img src="{{entity.photurl}}" class="featurette-image pull-left">{%endif%}</a>
+                <h2 class="featurette-heading">{{ entity.title }}</h2>
+                <h6>{% if entity.pubyear %}{{ entity.pubyear }}{% endif %}, {{ entity.publisher }}, {{ entity.genre }}</h6>
+                <p class="lead">{{ entity.blurb }}</p>
+           </div>
+<div class="featurette-divider"</div>     
+                <ul>
+                    <li>
+                        <a href="{{ path('books_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('books_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+        {% endfor %}
+
+        <ul>
+        <li>
+            <a href="{{ path('books_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

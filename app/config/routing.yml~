@@ -1,0 +1,31 @@
+test_user:
+    resource: "@TestUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test_pages:
+    resource: "@TestPagesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test_home:
+    resource: "@TestHomeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test_about:
+    resource: "@TestAboutBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test_recognition:
+    resource: "@TestRecognitionBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test_publications:
+    resource: "@TestPublicationsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+

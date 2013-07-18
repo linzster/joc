@@ -1,0 +1,42 @@
+{% extends 'TestPublicationsBundle::layout.html.twig' %}
+
+{% block body -%}
+
+<h1>Poems</h1>
+
+    <div class="container">
+
+        {% for entity in entities %}
+            <ul>
+                <div class="span4">
+                <h5>{{ entity.title }}</h5>
+                </div>
+		<div class="span4">
+                <p>{{ entity.journal }}, {{ entity.pubyear }}</p>
+		</div>
+		<div class="span1">
+		<a href="{{ entity.url }}" class="btn">Read</a>
+		</ul>
+<div class="row">
+<div class="span12">
+                <ul>
+                    <li>
+                        <a href="{{ path('poems_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('poems_edit', { 'id': entity.id }) }}"><i class="icon-edit"></i></a>
+                    </li>
+                </ul>
+              </div>
+</div>
+        {% endfor %}
+</div>
+
+        <ul>
+        <li>
+            <a href="{{ path('poems_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

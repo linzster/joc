@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Cofer Publications{% endblock %}
+
+{% block javascripts %}{% endblock %}
+
+{% block stylesheets %}{% endblock %}
+
+{% block subnav %}
+{% endblock %}

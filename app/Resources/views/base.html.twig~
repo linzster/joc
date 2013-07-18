@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>{% block title %}Welcome!{% endblock %}</title>
+
+<script src="{{ asset('bundles/testhome/js/jquery-1.7.2.min.js') }}"></script>
+
+<script src="{{ asset('bundles/testhome/js/bootstrap.js') }}"></script>
+
+<script src="{{ asset('bundles/testhome/js/jquery.form.js') }}"></script>
+
+<script src="{{ asset('bundles/testhome/js/modernizr.custom.js') }}"></script>
+
+<script src="{{ asset('bundles/testhome/js/toucheffects.js') }}"></script>
+
+<link type="text/css" rel="stylesheet" href="{{ asset('bundles/testhome/css/bootstrap.css') }}">
+
+<link type="text/css" rel="stylesheet" href="{{ asset('bundles/testhome/css/bootstrap-responsive.css') }}">
+
+<link type="text/css" rel="stylesheet" href="{{ asset('bundles/testhome/css/local.css') }}">
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<link href='http://fonts.googleapis.com/css?family=Cinzel|Cardo' rel='stylesheet' type='text/css'>
+
+{% block javascripts %}{% endblock %}
+
+{% block stylesheets %}{% endblock %}
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">Judith Ortiz Cofer</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<div class="container main" id="mainContainer">
+
+
+{%if block('sidebar') %}
+
+   <div class="row " role="navigation">  
+
+   <div class="span2 sidebar">
+
+    <a name="skip"></a>   
+
+    <ul class="nav nav-list">
+
+   {{block('sidebar')}}
+
+   </div>          
+
+   <div class="span10" role="main" id="content">      
+
+   {% block content %}          
+
+   {% endblock %}                                          
+
+   </div>   
+
+   </div>
+
+{% else %}
+
+   {{block('body')}}
+
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
