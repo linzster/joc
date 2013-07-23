@@ -3,10 +3,10 @@
 {% block body -%}
     <h1>Books list</h1>
 
-    <div class="container">
+    <div class="span12">
 
         {% for entity in entities %}
-
+<div class='span5'>
 <ul class="grid cs-style-4">
     <li>
         <figure>
@@ -18,7 +18,8 @@
             </figcaption>
         </figure>
     </li>
-</ul>   
+</ul>  
+{% if is_granted('ROLE_ADMIN') %}        
                 <ul>
                     <li>
                         <a href="{{ path('books_show', { 'id': entity.id }) }}">show</a>
@@ -27,8 +28,10 @@
                         <a href="{{ path('books_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
-        {% endfor %}
-
+{% endif %}          
+</div>
+{% endfor %}
+{% if is_granted('ROLE_ADMIN') %}
         <ul>
         <li>
             <a href="{{ path('books_new') }}">
@@ -36,4 +39,5 @@
             </a>
         </li>
     </ul>
-    {% endblock %}
+{% endif %}        
+{% endblock %}
