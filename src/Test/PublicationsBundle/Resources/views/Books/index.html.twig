@@ -5,10 +5,10 @@
 {% block body -%}
     <h1>Books list</h1>
 
-    <div class="container">
+    <div class="span12">
 
         {% for entity in entities %}
-
+<div class="span4">
 <ul class="grid cs-style-6">
     <li>
         <figure>
@@ -29,6 +29,7 @@
                         <a href="{{ path('books_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
+    </div>
         {% endfor %}
 
         <ul>

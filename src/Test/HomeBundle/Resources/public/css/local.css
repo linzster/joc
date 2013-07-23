@@ -87,29 +87,24 @@ h1 {
  
 .grid li {
     display: inline;
-    max-width: 400px;
     margin: 0;
     padding: 20px;
     text-align: left;
     position: relative;
-    float:right;
 }
 
 .grid figure {
     margin: 0;
     position: relative;
-    max-width: 400px;
 }
 
 .grid figure img {
-    max-width: 100%;
     display: block;
     position: relative;
 }
 
 .grid figcaption {
     position: absolute;
-    max-width: 400px;
     top: 0;
     left: 0;
     padding: 0;
