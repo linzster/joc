@@ -1,3 +1,5 @@
+{# books index display page#}
+
 {% extends 'TestPublicationsBundle::layout.html.twig' %}
 
 {% block body -%}
@@ -7,7 +9,7 @@
 
         {% for entity in entities %}
 
-<ul class="grid cs-style-4">
+<ul class="grid cs-style-6">
     <li>
         <figure>
             <div><img src="{{entity.photurl}}" alt="img01"></div>
@@ -17,7 +19,8 @@
                 <a href="{{ path('books_show', { 'id': entity.id }) }}"{% if entity.photurl != '' %}>Take a look{%endif%}</a>
             </figcaption>
         </figure>
-    </li>   
+    </li>
+</ul>   
                 <ul>
                     <li>
                         <a href="{{ path('books_show', { 'id': entity.id }) }}">show</a>

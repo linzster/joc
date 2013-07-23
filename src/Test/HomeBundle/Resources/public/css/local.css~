@@ -1,6 +1,6 @@
 body {
 
-	background-image: url(../images/background-flower.JPG);
+	background-image: url(../images/hib-under.jpg);
   	background-repeat: no-repeat; 
 	background-size:cover;
 	padding:80px;
@@ -12,7 +12,9 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Cinzel', serif;
 }
 
-
+h1 {
+	text-align: center;
+}
 
 .container {
   margin: 0 auto;
@@ -21,48 +23,9 @@ h1,h2,h3,h4,h5,h6 {
 
 #mainContainer { 
 	padding: 20px; 
-	background-color:white;
-	opacity:0.8;
-  	filter:alpha(opacity=60); /* For IE8 and earlier */
+
 }
 
- /* Featurettes
-    ------------------------- */
-
-.featurette-divider {
-      margin: 10px 0; /* Space out the Bootstrap <hr> more */
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-.featurette {
-      padding-top: 20px; /* Vertically center images part 1: add padding above and below text. */
-      overflow: hidden; /* Vertically center images part 2: clear their floats. */
-      margin-right: 80px;
-      margin-left: 80px;
-    }
-.featurette-image {
-      margin-top: -30px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
-      width:200px;
-      height:300px;
-      -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-    }
-
-    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
-.featurette-image.pull-left {
-      margin-right: 40px;
-    }
-.featurette-image.pull-right {
-      margin-left: 40px;
-    }
-
-.featurette-heading {
-      font-size: 40px;
-      font-weight: 300;
-      line-height: 1em;
-      letter-spacing: -1px;
-    }
 
 .firstcharacter {
       	float: left; 
@@ -74,20 +37,48 @@ h1,h2,h3,h4,h5,h6 {
       	padding-left: 3px;       
       }
 #home {
-	padding-top:200px;
-	color:#ffcc33;
+	background-color:white;
+	background-image:none;
+	margin:0;
+        padding:0;
+
+}
+
+#home.container {
+    width: 495px;
+    height: 720px;
+    background-image: url(../images/hib-sent-med.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    color:white;
+    font-size:100px;
+    line-height:150px;
+    letter-spacing:0.3em;
+    font-family: 'Cinzel', serif;
+    text-align:center;
+}​
+
+#home.container div{	
+	padding-top:100px;	
 }
 
 .sidebar {
 	text-align: right;
+	padding-top:30%;
+}
+
+#title {
+	padding-top:30%;
 }
 
 #content h1 {
 	text-align: right;
+	
 }
 
 .grid {
-    padding: 20px 20px 100px 20px;
+    padding: 20px 20px 20px 20px;
     max-width: 1300px;
     margin: 0 auto;
     list-style: none;
@@ -95,22 +86,19 @@ h1,h2,h3,h4,h5,h6 {
 }
  
 .grid li {
-    display: inline-block;
-    width: 440px;
+    display: inline;
+    max-width: 400px;
     margin: 0;
     padding: 20px;
     text-align: left;
     position: relative;
+    float:right;
 }
 
 .grid figure {
     margin: 0;
     position: relative;
-}
-
-.grid figure {
-    margin: 0;
-    position: relative;
+    max-width: 400px;
 }
 
 .grid figure img {
@@ -121,6 +109,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .grid figcaption {
     position: absolute;
+    max-width: 400px;
     top: 0;
     left: 0;
     padding: 0;
@@ -128,7 +117,7 @@ h1,h2,h3,h4,h5,h6 {
     color: #ed4e6e;
 }
 
-.grid figcaption h3 {
+.grid figcaption h4 {
     margin: 0;
     padding: 10px;
     color: #fff;
@@ -138,7 +127,7 @@ h1,h2,h3,h4,h5,h6 {
 	padding:10px;
 }
 .grid figcaption span:before {
-    content: 'pub. ';
+    content: 'published in ';
 }
  
 .grid figcaption a {
@@ -150,74 +139,36 @@ h1,h2,h3,h4,h5,h6 {
     color: #fff;
 }
 
-.cs-style-4 li {
-	-webkit-perspective: 1700px;
-	-moz-perspective: 1700px;
-	perspective: 1700px;
-	-webkit-perspective-origin: 0 50%;
-	-moz-perspective-origin: 0 50%;
-	perspective-origin: 0 50%;
-}
-
-.cs-style-4 figure {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-}
-
-.cs-style-4 figure > div {
-	overflow: hidden;
-}
-
-.cs-style-4 figure img {
+/* Caption Style 6 */
+.cs-style-6 figure img {
+	z-index: 10;
 	-webkit-transition: -webkit-transform 0.4s;
 	-moz-transition: -moz-transform 0.4s;
 	transition: transform 0.4s;
 }
 
-.no-touch .cs-style-4 figure:hover img,
-.cs-style-4 figure.cs-hover img {
-	-webkit-transform: translateX(25%);
-	-moz-transform: translateX(25%);
-	-ms-transform: translateX(25%);
-	transform: translateX(25%);
+.no-touch .cs-style-6 figure:hover img,
+.cs-style-6 figure.cs-hover img {
+	-webkit-transform: translateY(-50px) scale(0.5);
+	-moz-transform: translateY(-50px) scale(0.5);
+	-ms-transform: translateY(-50px) scale(0.5);
+	transform: translateY(-50px) scale(0.5);
 }
 
-.cs-style-4 figcaption {
+.cs-style-6 figcaption {
 	height: 100%;
-	width: 30%;
-	opacity: 0;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transform-origin: 0 0;
-	-moz-transform-origin: 0 0;
-	transform-origin: 0 0;
-	-webkit-transform: rotateY(-90deg);
-	-moz-transform: rotateY(-90deg);
-	transform: rotateY(-90deg);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
-	transition: transform 0.4s, opacity 0.1s 0.3s;
+	width: 100%;
 }
 
-.no-touch .cs-style-4 figure:hover figcaption,
-.cs-style-4 figure.cs-hover figcaption {
-	opacity: 1;
-	-webkit-transform: rotateY(0deg);
-	-moz-transform: rotateY(0deg);
-	transform: rotateY(0deg);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
-	transition: transform 0.4s, opacity 0.1s;
+.cs-style-6 figcaption h4 {
+	margin-top: 92%;
 }
 
-.cs-style-4 figcaption a {
+.cs-style-6 figcaption a {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
 }
-
 @media screen and (max-width: 31.5em) {
     .grid {
         padding: 10px 10px 100px 10px;
