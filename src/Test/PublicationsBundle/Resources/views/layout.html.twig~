@@ -1,11 +1,16 @@
+{# publications bundle layout #}
 
 {% extends '::base.html.twig' %}
 
+
 {% block title %}Cofer Publications{% endblock %}
 
-{% block javascripts %}{% endblock %}
+{% block sidebar -%}
 
-{% block stylesheets %}{% endblock %}
+<li class="nav header">publications</li>
+<li>books</li>
+<li>poems</li>
 
-{% block subnav %}
-{% endblock %}
+
+  {% endblock %}
+

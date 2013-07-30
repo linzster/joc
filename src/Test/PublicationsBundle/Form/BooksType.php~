@@ -12,8 +12,8 @@ class BooksType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('pubyear', 'date', array(
-  'input'  => 'date',
+            ->add('pubyear', 'datetime', array(
+  'input'  => 'datetime',
   'widget' => 'text',
 ))
             ->add('blurb')

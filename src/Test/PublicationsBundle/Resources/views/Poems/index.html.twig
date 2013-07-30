@@ -2,9 +2,20 @@
 
 {% extends 'TestPublicationsBundle::layout.html.twig' %}
 
-{% block body -%}
+{% block sidebar -%}
 
-<h1>Poems</h1>
+<li>P</li>
+<li>O</li>
+<li>E</li>
+<li>M</li>
+<li>S</li>
+
+
+  {% endblock %}
+
+
+{% block content -%}
+
 
     <div class="container">
 
@@ -18,24 +29,26 @@
 		</ul>
 <div class="row">
 <div class="span12">
+                {% if is_granted('ROLE_ADMIN') %}
                 <ul>
                     <li>
-                        <a href="{{ path('poems_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('books_show', { 'id': entity.id }) }}">show</a>
                     </li>
                     <li>
-                        <a href="{{ path('poems_edit', { 'id': entity.id }) }}"><i class="icon-edit"></i></a>
+                        <a href="{{ path('books_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
-              </div>
+{% endif %}
 </div>
-        {% endfor %}
 </div>
-
+{% endfor %}
+{% if is_granted('ROLE_ADMIN') %}
         <ul>
         <li>
-            <a href="{{ path('poems_new') }}">
+            <a href="{{ path('books_new') }}">
                 Create a new entry
             </a>
         </li>
     </ul>
-    {% endblock %}
+{% endif %}
+{% endblock %}

@@ -2,25 +2,37 @@
 
 {% extends 'TestPublicationsBundle::layout.html.twig' %}
 
-{% block body -%}
-    <h1>Books list</h1>
+{% block sidebar -%}
 
-    <div class="span12">
+<li>B</li>
+<li>O</li>
+<li>O</li>
+<li>K</li>
+<li>S</li>
+
+
+  {% endblock %}
+
+
+{% block content -%}
+
+<div class="span6">
 
         {% for entity in entities %}
-<div class="span4">
+<div class="span2">
 <ul class="grid cs-style-6">
     <li>
         <figure>
             <div><img src="{{entity.photurl}}" alt="img01"></div>
             <figcaption>
                 <h4>{{ entity.title }}</h4>
-                <span>{% if entity.pubyear %}{{ entity.pubyear }}{% endif %}, {{ entity.publisher }}, {{ entity.genre }}</span>
+                <span><p>Published in {% if entity.pubyear %}{{ entity.pubyear }}{% endif %}, by {{ entity.publisher }}</p></span>
                 <a href="{{ path('books_show', { 'id': entity.id }) }}"{% if entity.photurl != '' %}>Take a look{%endif%}</a>
             </figcaption>
         </figure>
     </li>
 </ul>   
+               {% if is_granted('ROLE_ADMIN') %}
                 <ul>
                     <li>
                         <a href="{{ path('books_show', { 'id': entity.id }) }}">show</a>
@@ -29,9 +41,10 @@
                         <a href="{{ path('books_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
-    </div>
-        {% endfor %}
-
+{% endif %}
+</div>
+{% endfor %}
+{% if is_granted('ROLE_ADMIN') %}
         <ul>
         <li>
             <a href="{{ path('books_new') }}">
@@ -39,4 +52,5 @@
             </a>
         </li>
     </ul>
-    {% endblock %}
+{% endif %}
+{% endblock %}

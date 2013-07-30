@@ -49,7 +49,7 @@
         <ul class="nav">
           <li class=""><a href="{{ path('test_home_default_index')}}">Home</a></li>
           <li class="active"><a href="{{ path('books')}}">Books</a></li>
-          <li><a href="{{ path('about')}}">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 	 <ul class="nav pull-right nav-icons">
@@ -62,44 +62,41 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="">
 
-{%if block('sidebar') %}  
 
-   <div class="span2 sidebar" id="base">  
+{%if block('sidebar') %} 
 
-    <ul class="nav nav-list" id="base">
+   <div class="span2 sidebar">
+
+    <a name="skip"></a>   
+
+    <ul class="nav nav-list">
 
    {{block('sidebar')}}
+  
+</div>       
 
-   </div>           
+<div class="span7">
+
+<div class="container" id="base">      
+
+   {% block content %}          
+
+   {% endblock %}                                            
 
 
 {% else %}
-
 
    {{block('body')}}
 
 
 {% endif %}
- 
-<div class="span7">
 
-<div class="container" id="base"> 
+</div>  
 
-<div>
-   {% block content %}          
-
-   {% endblock %}                                          
-
-</div>
-</div>
-</div>
-
-
-
+</div> 
 </div>
 
 </body>
 </html>
-

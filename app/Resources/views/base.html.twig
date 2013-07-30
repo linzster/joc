@@ -47,8 +47,9 @@
       <a class="brand" href="#">Judith Ortiz Cofer</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li class=""><a href="{{ path('test_home_default_index')}}">Home</a></li>
+          <li class="active"><a href="{{ path('books')}}">Books</a></li>
+          <li><a href="">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 	 <ul class="nav pull-right nav-icons">
@@ -61,41 +62,44 @@
   </div>
 </div>
 
-<div class="container main" id="mainContainer">
+<div class="container">
 
+{%if block('sidebar') %}  
 
-{%if block('sidebar') %}
+   <div class="span2 sidebar" id="base">  
 
-   <div class="row " role="navigation">  
-
-   <div class="span2 sidebar">
-
-    <a name="skip"></a>   
-
-    <ul class="nav nav-list">
+    <ul class="nav nav-list" id="base">
 
    {{block('sidebar')}}
 
-   </div>          
+   </div>           
 
-   <div class="span10" role="main" id="content">      
-
-   {% block content %}          
-
-   {% endblock %}                                          
-
-   </div>   
-
-   </div>
 
 {% else %}
+
 
    {{block('body')}}
 
 
 {% endif %}
+ 
+<div class="span7">
+
+<div class="container" id="base"> 
+
+<div>
+   {% block content %}          
+
+   {% endblock %}                                          
+
+</div>
+</div>
+</div>
+
+
 
 </div>
 
 </body>
 </html>
+

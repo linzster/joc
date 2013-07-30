@@ -2,22 +2,29 @@
 
 {% extends 'TestPublicationsBundle::layout.html.twig' %}
 
-{% block body -%}
+{% block sidebar -%}
 
-<h1>Poems</h1>
+<li>P</li>
+<li>O</li>
+<li>E</li>
+<li>M</li>
+<li>S</li>
+
+
+  {% endblock %}
+
+
+{% block content -%}
+
 
     <div class="container">
 
         {% for entity in entities %}
             <ul>
                 <div class="span12">
-<div class="span1">
-                <a href="{{ entity.url }}"><i class="icon-hand-right"></i></a>
-</div>
-<div class="span11">
 		<h4>{{ entity.title }}</h4>
-</div>
-                <a href="{{ entity.url }}"><p>{{ entity.journal }}, {{ entity.pubyear }}</p></a>
+                <p>{{ entity.journal }}, {{ entity.pubyear }}</p>
+		<a class="btn btn-small" href="{{ entity.url }}">read online</a>
 		</div>
 		</ul>
 <div class="row">
