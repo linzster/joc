@@ -243,3 +243,15 @@ h1 {
 	line-height:18px;
 }
 
+#show.span4 {
+    padding-left:40px;
+    padding-bottom:20px;
+}
+
+#show.img-polaroid {
+    
+    margin-top:-10px;
+}
+.record_actions li {
+    list-style:none;
+}

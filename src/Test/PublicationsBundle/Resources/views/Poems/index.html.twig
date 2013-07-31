@@ -32,10 +32,10 @@
                 {% if is_granted('ROLE_ADMIN') %}
                 <ul>
                     <li>
-                        <a href="{{ path('books_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('poems_show', { 'id': entity.id }) }}">show</a>
                     </li>
                     <li>
-                        <a href="{{ path('books_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('poems_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
 {% endif %}
@@ -45,7 +45,7 @@
 {% if is_granted('ROLE_ADMIN') %}
         <ul>
         <li>
-            <a href="{{ path('books_new') }}">
+            <a href="{{ path('poems_new') }}">
                 Create a new entry
             </a>
         </li>

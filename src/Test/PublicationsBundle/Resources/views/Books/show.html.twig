@@ -1,47 +1,40 @@
-{% extends '::base.html.twig' %}
+{# books item display page#}
 
-{% block body -%}
-    <h1>Books</h1>
+{% extends 'TestPublicationsBundle::layout.html.twig' %}
 
-    <table class="record_properties">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ entity.title }}</td>
-            </tr>
-            <tr>
-                <th>Pubyear</th>
-                <td>{{ entity.pubyear|date('Y-m-d H:i:s') }}</td>
-            </tr>
-            <tr>
-                <th>Blurb</th>
-                <td>{{ entity.blurb }}</td>
-            </tr>
-            <tr>
-                <th>Photurl</th>
-                <td>{{ entity.photurl }}</td>
-            </tr>
-            <tr>
-                <th>Publisher</th>
-                <td>{{ entity.publisher }}</td>
-            </tr>
-            <tr>
-                <th>Genre</th>
-                <td>{{ entity.genre }}</td>
-            </tr>
-        </tbody>
-    </table>
+{% block sidebar -%}
+
+<li>R</li>
+<li>E</li>
+<li>A</li>
+<li>D</li>
+
+
+
+  {% endblock %}
+
+
+{% block content -%}
+<div class="span4" id="show">
+    <div class="row">
+    <div><img class="img-polaroid" id="show" src="{{entity.photurl}}" alt="img01"></div>
+    </div>
+       {# <div class="row"><h3>{{ entity.title }}</h3></div>#}
+       
+        <div class="row"><p>{{ entity.blurb }}</p></div>
+    
+                <div class="row"><h5>Published by {{ entity.publisher }} in {% if entity.pubyear %}{{ entity.pubyear }}{% endif %}</h5></div>
+   
+                <div class="row"><p>Genre: {{ entity.genre }}</p></div>
+</div>
 
         <ul class="record_actions">
     <li>
-        <a href="{{ path('books') }}">
+        <a class="btn" href="{{ path('books') }}">
             Back to the list
         </a>
     </li>
+    {% if is_granted('ROLE_ADMIN') %}
     <li>
         <a href="{{ path('books_edit', { 'id': entity.id }) }}">
             Edit
@@ -55,4 +48,5 @@
         </form>
     </li>
 </ul>
+{% endif %}
 {% endblock %}
