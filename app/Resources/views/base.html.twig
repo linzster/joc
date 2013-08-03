@@ -8,6 +8,8 @@
 
 <title>{% block title %}Welcome!{% endblock %}</title>
 
+
+{% block javascripts %}
 <script src="{{ asset('bundles/testhome/js/jquery-1.7.2.min.js') }}"></script>
 
 <script src="{{ asset('bundles/testhome/js/bootstrap.js') }}"></script>
@@ -17,7 +19,9 @@
 <script src="{{ asset('bundles/testhome/js/modernizr.custom.js') }}"></script>
 
 <script src="{{ asset('bundles/testhome/js/toucheffects.js') }}"></script>
+{% endblock %}
 
+{% block stylesheets %}
 <link type="text/css" rel="stylesheet" href="{{ asset('bundles/testhome/css/bootstrap.css') }}">
 
 <link type="text/css" rel="stylesheet" href="{{ asset('bundles/testhome/css/bootstrap-responsive.css') }}">
@@ -27,10 +31,7 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 <link href='http://fonts.googleapis.com/css?family=Cinzel|Cardo' rel='stylesheet' type='text/css'>
-
-{% block javascripts %}{% endblock %}
-
-{% block stylesheets %}{% endblock %}
+{% endblock %}
 
 </head>
 
@@ -99,6 +100,8 @@
 
 
 </div>
+    
+    <div class="footer" style="color:white; padding:20px;"> site development: lindsey harding.  images: david foster</div>
 
 </body>
 </html>

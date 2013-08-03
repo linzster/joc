@@ -22,6 +22,8 @@
        {# <div class="row"><h3>{{ entity.title }}</h3></div>#}
        
         <div class="row"><p>{{ entity.blurb }}</p></div>
+        
+        <hr />
     
                 <div class="row"><h5>Published by {{ entity.publisher }} in {% if entity.pubyear %}{{ entity.pubyear }}{% endif %}</h5></div>
    
@@ -30,9 +32,14 @@
 
         <ul class="record_actions">
     <li>
+       
+          <a style="margin-right:80px;" class="btn" href="">
+            Purchase online
+        </a>
         <a class="btn" href="{{ path('books') }}">
             Back to the list
         </a>
+
     </li>
     {% if is_granted('ROLE_ADMIN') %}
     <li>

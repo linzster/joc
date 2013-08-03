@@ -4,6 +4,13 @@
 
 {% block sidebar -%}
 
+<div style="background-color:white;max-width:495px;padding:0;margin:0;" class="navbar my-navbar">
+<div class="navbar-inner" style="border-style:none;background-image:none;background-color:white;">
+        <button class="btn btn-navbar collapsed" data-target=".nav-collapse" data-toggle="collapse" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button><div class="nav-collapse collapse" style="height: 0px;">
             <ul class="nav">
  <li class="">
                 <a class="black" href="{{ path('test_home_default_index')}}">home</
@@ -13,7 +20,9 @@
               <li><a class="black" href="">resources</a></li>
               <li><a class="black" href="">contact</a></li>
             </ul>
-
+          </div>
+        </div>
+      </div>
     
 
   {% endblock %}
