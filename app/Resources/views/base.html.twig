@@ -12,13 +12,14 @@
 {% block javascripts %}
 <script src="{{ asset('bundles/testhome/js/jquery-1.7.2.min.js') }}"></script>
 
-<script src="{{ asset('bundles/testhome/js/bootstrap.js') }}"></script>
+<script src="{{ asset('bundles/testhome/js/bootstrap.min.js') }}"></script>
 
 <script src="{{ asset('bundles/testhome/js/jquery.form.js') }}"></script>
 
 <script src="{{ asset('bundles/testhome/js/modernizr.custom.js') }}"></script>
 
 <script src="{{ asset('bundles/testhome/js/toucheffects.js') }}"></script>
+
 {% endblock %}
 
 {% block stylesheets %}
@@ -49,9 +50,22 @@
       <div class="nav-collapse collapse">
         <ul class="nav">
           <li class=""><a href="{{ path('test_home_default_index')}}">Home</a></li>
-          <li class="active"><a href="{{ path('books')}}">Books</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+ <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Publications</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a tabindex="-1" href="{{ path('books')}}">Books</a></li>
+                            <li><a tabindex="-1" href="{{ path('poems')}}">Poems</a></li>
+</ul>
+</li>
+
+          <li><a href="{{ path('test_about_default_index')}}">About</a></li>
+ <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a tabindex="-1" href="{{ path('form_new')}}">Form</a></li>
+                            <li><a tabindex="-1" href="">Info</a></li>
+</ul>
+</li>
         </ul>
 	 <ul class="nav pull-right nav-icons">
           <li class=""><a href="#"><i class="icon-facebook-sign"></i></a></li>

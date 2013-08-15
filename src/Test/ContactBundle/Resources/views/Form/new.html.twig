@@ -1,0 +1,37 @@
+{# contact form new page#}
+
+{% extends 'TestContactBundle::layout.html.twig' %}
+
+{% block sidebar -%}
+
+<li>C</li>
+<li>O</li>
+<li>N</li>
+<li>T</li>
+<li>A</li>
+<li>C</li>
+<li>T</li>
+
+
+{% endblock %}
+
+
+{% block content -%}
+
+<div class="span6">
+
+    <h5>Have a question or comment for the author?</h5>
+    <p>Fill out the form below.</p>
+<div class="span4">
+<hr>
+</div>
+</div>
+<div class="span6">
+    <form action="{{ path('form_create') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <p>
+            <a class="btn" type="submit">Submit</a>
+        </p>
+    </form>
+</div>
+{% endblock %}

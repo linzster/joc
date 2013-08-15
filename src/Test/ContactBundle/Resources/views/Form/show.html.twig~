@@ -1,0 +1,56 @@
+{# contact form new page#}
+
+{% extends 'TestContactBundle::layout.html.twig' %}
+
+{% block sidebar -%}
+
+<li>C</li>
+<li>O</li>
+<li>N</li>
+<li>T</li>
+<li>A</li>
+<li>C</li>
+<li>T</li>
+
+
+{% endblock %}
+
+
+{% block content -%}
+
+<div class="span6">
+    <h6 class="text-success">Thank you.</h6>
+    <h6 class="text-success">You will receive a response shortly.</h6>
+<div class="span4">
+<hr>
+</div>
+</div>
+<div class="span6">
+
+     <div>{{ entity.firstname }}</div>
+
+     <div>{{ entity.lastname }}</div>
+
+     <div>{{ entity.comment }}</div>
+
+     <div>{{ entity.email }}</div>
+<div class="span4">
+<hr>
+</div>
+</div>
+<div class="span6">
+
+<div style="padding-bottom:0;">
+<div>
+     
+        <a class="btn" href="{{ path('form_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+        <form action="{{ path('form_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <a class="btn" type="submit">Delete</a>
+        </form>
+</div>
+</div>
+{% endblock %}

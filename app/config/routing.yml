@@ -1,3 +1,8 @@
+test_contact:
+    resource: "@TestContactBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 test_user:
     resource: "@TestUserBundle/Controller/"
     type:     annotation

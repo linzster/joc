@@ -105,8 +105,8 @@ h1 {
 }
 
 #base.nav.nav-list li {
-    line-height: 100px;
-    font-size:80px;
+    line-height: 80px;
+    font-size:60px;
     letter-spacing:0.3em;
     font-family: 'Cinzel', serif;
     text-align:center;
@@ -243,3 +243,19 @@ h1 {
 	line-height:18px;
 }
 
+#show.span4 {
+    padding-left:40px;
+    padding-bottom:20px;
+}
+
+#show.img-polaroid {
+    
+    margin-top:-10px;
+}
+.record_actions li {
+    list-style:none;
+}
+
+.short hr{
+    max-width:80px;
+}
