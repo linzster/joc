@@ -62,7 +62,7 @@
  <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact</a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                            <li><a tabindex="-1" href="{{ path('form/new')}}">Form</a></li>
+                            <li><a tabindex="-1" href="{{ path('form_new')}}">Form</a></li>
                             <li><a tabindex="-1" href="">Info</a></li>
 </ul>
 </li>
