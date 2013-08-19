@@ -5,12 +5,4 @@
 
 {% block title %}Cofer Publications{% endblock %}
 
-{% block sidebar -%}
-
-<li class="nav header">publications</li>
-<li>books</li>
-<li>poems</li>
-
-
-  {% endblock %}
 

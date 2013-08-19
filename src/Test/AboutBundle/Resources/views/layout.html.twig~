@@ -1,10 +1,4 @@
 {% extends '::base.html.twig' %}
 
-{% block title %}Cofer About{% endblock %}
+{% block title %}About JOC{% endblock %}
 
-{% block javascripts %}{% endblock %}
-
-{% block stylesheets %}{% endblock %}
-
-{% block subnav %}
-{% endblock %}
