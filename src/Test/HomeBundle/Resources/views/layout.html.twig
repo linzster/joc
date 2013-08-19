@@ -8,11 +8,13 @@
 
 <title>{% block title %}{% endblock %}</title>
 
+<link rel="shortcut icon" href="http://faviconist.com/icons/36412d2a44d524d73303b10367013343/favicon.ico" />
+
 {% block javascripts %}
 
 <script src="{{ asset('bundles/testhome/js/jquery-1.7.2.min.js') }}"></script>
 
-<script src="{{ asset('bundles/testhome/js/bootstrap.js') }}"></script>
+<script src="{{ asset('bundles/testhome/js/bootstrap.min.js') }}"></script>
 
 <script src="{{ asset('bundles/testhome/js/jquery.form.js') }}"></script>{% endblock %}
 
@@ -31,7 +33,7 @@
 <body id="home">
 
 
-<div class="container">
+<div class="container" id="center">
 
 {%if block('sidebar') %}  
 

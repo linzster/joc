@@ -64,12 +64,17 @@ h1 {
 }
 
 #home.container {
+    top: 50%;
+    left: 50%;
     width: 495px;
     height: 720px;
+    margin-top: -360px; 
+    margin-left: -247px; 
+    position:fixed;
     background-image: url(../images/hib-sent-med.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center center;
     color:white;
     font-size:100px;
     line-height:150px;
@@ -256,6 +261,20 @@ h1 {
     list-style:none;
 }
 
-.short hr{
-    max-width:80px;
+.dropdown-menu {
+	min-width: 80px;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	color: black;
+  	text-decoration: none;
+	background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #e6e6e6, #d2d2d2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6, to(#d2d2d2));
+  background-image: -webkit-linear-gradient(top, #e6e6e6, #d2d2d2);
+  background-image: -o-linear-gradient(top, #e6e6e6, #d2d2d2);
+  background-image: linear-gradient(to bottom, #e6e6e6, #d2d2d2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e6e6', endColorstr='#d2d2d2', GradientType=0);
 }

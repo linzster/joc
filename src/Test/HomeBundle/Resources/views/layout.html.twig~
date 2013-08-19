@@ -8,12 +8,15 @@
 
 <title>{% block title %}{% endblock %}</title>
 
+{% block javascripts %}
+
 <script src="{{ asset('bundles/testhome/js/jquery-1.7.2.min.js') }}"></script>
 
-<script src="{{ asset('bundles/testhome/js/bootstrap.js') }}"></script>
+<script src="{{ asset('bundles/testhome/js/bootstrap.min.js') }}"></script>
 
-<script src="{{ asset('bundles/testhome/js/jquery.form.js') }}"></script>
+<script src="{{ asset('bundles/testhome/js/jquery.form.js') }}"></script>{% endblock %}
 
+{% block stylesheets %}
 <link type="text/css" rel="stylesheet" href="{{ asset('bundles/testhome/css/bootstrap.css') }}">
 
 <link type="text/css" rel="stylesheet" href="{{ asset('bundles/testhome/css/bootstrap-responsive.css') }}">
@@ -21,23 +24,20 @@
 <link type="text/css" rel="stylesheet" href="{{ asset('bundles/testhome/css/local.css') }}">
 
 <link href='http://fonts.googleapis.com/css?family=Cinzel|Cardo' rel='stylesheet' type='text/css'>
-
-{% block javascripts %}{% endblock %}
-
-{% block stylesheets %}{% endblock %}
+{% endblock %}
 
 </head>
 
 <body id="home">
 
 
-<div class="container">
+<div class="container" id="center">
 
 {%if block('sidebar') %}  
 
    <div class="span2 sidebar">  
 
-    <ul class="nav nav-list">
+    <ul class="nav nav-list" id="black">
 
    {{block('sidebar')}}
 

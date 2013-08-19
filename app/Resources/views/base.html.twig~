@@ -8,6 +8,8 @@
 
 <title>{% block title %}Welcome!{% endblock %}</title>
 
+<link rel="shortcut icon" href="http://faviconist.com/icons/36412d2a44d524d73303b10367013343/favicon.ico" />
+
 
 {% block javascripts %}
 <script src="{{ asset('bundles/testhome/js/jquery-1.7.2.min.js') }}"></script>
@@ -46,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#">Judith Ortiz Cofer</a>
+      <a class="brand disabled" href="#">Judith Ortiz Cofer</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
           <li class=""><a href="{{ path('test_home_default_index')}}">Home</a></li>
