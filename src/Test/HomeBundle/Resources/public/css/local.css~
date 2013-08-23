@@ -150,7 +150,7 @@ h1 {
  
 .grid li {
     display: inline-block;
-    width: 150px;
+    width: 180px;
     margin: 0;
     padding: 5px;
     text-align: left;
@@ -158,14 +158,14 @@ h1 {
 }
 
 .grid figure {
-    width:150px;
+    width:180px;
     margin: 0;
     position: relative;
 }
 
 .grid figure img {
     height:250px;
-    width: 150px;
+    width: 180px;
     display: block;
     position: relative;
 }
@@ -188,8 +188,8 @@ h1 {
     text-align:center;
 }
  
-.grid figcaption span p{
-	padding:5px;
+.grid figcaption span h5{
+	padding:10px;
 	text-align:left;
 }
  
@@ -224,7 +224,7 @@ h1 {
 }
 
 .cs-style-6 figcaption h4 {
-	margin-top: 91%;
+	margin-top: 80%;
 	padding:2px;
 }
 
@@ -270,11 +270,59 @@ h1 {
 	color: black;
   	text-decoration: none;
 	background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, #e6e6e6, #d2d2d2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6, to(#d2d2d2));
-  background-image: -webkit-linear-gradient(top, #e6e6e6, #d2d2d2);
-  background-image: -o-linear-gradient(top, #e6e6e6, #d2d2d2);
-  background-image: linear-gradient(to bottom, #e6e6e6, #d2d2d2);
+  background-image: -moz-linear-gradient(top, #e6e6e6,  #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6, to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #e6e6e6,  #e6e6e6);
+  background-image: -o-linear-gradient(top, #e6e6e6,  #e6e6e6);
+  background-image: linear-gradient(to bottom, #e6e6e6,  #e6e6e6);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e6e6', endColorstr='#d2d2d2', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e6e6', endColorstr='#e6e6e6', GradientType=0);
 }
+
+  /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -40px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 40px;
+}
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+.muted {
+  color:black;
+}
+
+a.muted {
+  color:#808080;
+}
+
+a.muted:hover,
+a.muted:focus {
+  color: #f7f7f7;
+}
+

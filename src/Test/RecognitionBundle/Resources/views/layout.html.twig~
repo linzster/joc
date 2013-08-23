@@ -1,0 +1,7 @@
+{# resource bundle layout #}
+
+{% extends '::base.html.twig' %}
+
+
+{% block title %}Publications{% endblock %}
+

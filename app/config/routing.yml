@@ -1,3 +1,4 @@
+
 test_contact:
     resource: "@TestContactBundle/Controller/"
     type:     annotation

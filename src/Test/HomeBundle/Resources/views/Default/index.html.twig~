@@ -15,11 +15,16 @@
                             <li><a tabindex="-1" href="{{ path('poems')}}">poems</a></li>
 </ul>
 </li>
-              <li><a class="black" href="{{ path('books')}}">publications</a></li>
+	      <li><a href="{{ path('resource')}}">resources</a></li>
               <li><a class="black" href="{{ path('test_about_default_index')}}">about</a></li>
-              <li><a class="black" href="{{ path('test_contact_default_index')}}">contact</a></li>
+ <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">contact</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a tabindex="-1" href="{{ path('form_new')}}">form</a></li>
+                            <li><a tabindex="-1" href="{{ path('test_contact_default_index')}}">info</a></li>
             </ul>
-
+</li>
+        </ul>
     
 
   {% endblock %}

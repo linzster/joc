@@ -29,19 +29,20 @@
 		</ul>
 <div class="row">
 <div class="span12">
+                {% if is_granted('ROLE_ADMIN') %}
                 <ul>
                     <li>
                         <a href="{{ path('poems_show', { 'id': entity.id }) }}">show</a>
                     </li>
                     <li>
-                        <a href="{{ path('poems_edit', { 'id': entity.id }) }}"><i class="icon-edit"></i></a>
+                        <a href="{{ path('poems_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
-              </div>
+{% endif %}
 </div>
-        {% endfor %}
 </div>
-
+{% endfor %}
+{% if is_granted('ROLE_ADMIN') %}
         <ul>
         <li>
             <a href="{{ path('poems_new') }}">
@@ -49,4 +50,5 @@
             </a>
         </li>
     </ul>
-    {% endblock %}
+{% endif %}
+{% endblock %}

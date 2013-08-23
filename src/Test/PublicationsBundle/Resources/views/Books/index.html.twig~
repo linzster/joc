@@ -16,7 +16,7 @@
 
 {% block content -%}
 
-<div class="span7">
+<div style="margin-left:-5px;" class="span6">
 
         {% for entity in entities %}
 <div class="span2">
@@ -26,7 +26,7 @@
             <div><img src="{{entity.photurl}}" alt="img01"></div>
             <figcaption>
                 <h4>{{ entity.title }}</h4>
-                <span><p>Published in {% if entity.pubyear %}{{ entity.pubyear }}{% endif %}, by {{ entity.publisher }}</p></span>
+                <span><h6>{% if entity.pubyear %}{{ entity.pubyear }}{% endif %}{#, by {{ entity.publisher }}#}</h6></span>
                 <a href="{{ path('books_show', { 'id': entity.id }) }}"{% if entity.photurl != '' %}>Take a look{%endif%}</a>
             </figcaption>
         </figure>
