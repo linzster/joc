@@ -11,17 +11,19 @@ class ResourceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+
             ->add('title')
             ->add('author')
             ->add('blurb')
             ->add('link')
             ->add('genre', 'choice', array(
-    'choices'   => array('Article' => 'Article', 'Interview' => 'Interview', 'Video' => 'Video', 'Website' => 'Website', 'Press Release' => 'Press Release', 'Book' => 'Book'),
+    'choices'   => array('Article' => 'Article', 'Interview' => 'Interview', 'Video' => 'Video', 'Web Page' => 'Web Page', 'Press Release' => 'Press Release', 'Book' => 'Book'),
     'required'  => false,
 ))
             ->add('dateCreated', 'date', array(
     'input'  => 'datetime',
     'widget' => 'choice',
+'years' => range(1985,2025),
 ))
             ->add('datePosted', 'date', array(
     'input'  => 'datetime',

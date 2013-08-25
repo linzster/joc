@@ -26,7 +26,7 @@
             <div><img src="{{entity.photurl}}" alt="img01"></div>
             <figcaption>
                 <h4>{{ entity.title }}</h4>
-                <span><h6>{% if entity.pubyear %}{{ entity.pubyear }}{% endif %}{#, by {{ entity.publisher }}#}</h6></span>
+                <span><h5>{% if entity.pubyear %}{{ entity.pubyear }}{% endif %}{#, by {{ entity.publisher }}#}</h5></span>
                 <a href="{{ path('books_show', { 'id': entity.id }) }}"{% if entity.photurl != '' %}>Take a look{%endif%}</a>
             </figcaption>
         </figure>

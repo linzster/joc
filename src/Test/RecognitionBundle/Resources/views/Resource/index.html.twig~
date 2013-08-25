@@ -23,7 +23,7 @@
     <div class="container">
 
         {% for entity in entities %}
-            <ul>
+           <ul>
                 <div style="margin:-5px;" class="span5">
           	<h4>{{ entity.title }}</h4>
 		<div style="padding-right:10px;" class="pull-right">
@@ -33,14 +33,15 @@
  		<p>{% if entity.dateCreated %}{{ entity.dateCreated|date ('F jS, o') }}{% endif %}</p>
                 <p>{<i>{{ entity.blurb }}</i>}</p>
                 <p>Posted on {% if entity.datePosted %}{{ entity.datePosted|date ('F jS, o') }}{% endif %}</p>
-<hr />
 </div>
-		</ul>
+<hr />
+</ul>
+
 <div class="row">
-<div class="span12">
+<div class="span12">		
                 {% if is_granted('ROLE_ADMIN') %}
-<div class="row">
-<div class="span12">
+
+<ul>
                     <li>
                         <a href="{{ path('resource_show', { 'id': entity.id }) }}">show</a>
                     </li>
@@ -51,7 +52,7 @@
 {% endif %}
 </div>
 </div>
-        {% endfor %}
+{% endfor %}
 {% if is_granted('ROLE_ADMIN') %}
         <ul>
         <li>
@@ -61,4 +62,5 @@
         </li>
     </ul>
 {% endif %}
+</div>
     {% endblock %}

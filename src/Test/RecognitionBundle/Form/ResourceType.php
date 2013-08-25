@@ -11,6 +11,7 @@ class ResourceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+
             ->add('title')
             ->add('author')
             ->add('blurb')
@@ -22,10 +23,12 @@ class ResourceType extends AbstractType
             ->add('dateCreated', 'date', array(
     'input'  => 'datetime',
     'widget' => 'choice',
+    'years' => range(1985,2025),
 ))
             ->add('datePosted', 'date', array(
     'input'  => 'datetime',
     'widget' => 'choice',
+    'years' => range(1985,2025),
 ));
     }
 
