@@ -25,11 +25,6 @@
 		<h4>{{ entity.title }}</h4>
                 <p>{{ entity.journal }}, {{ entity.pubyear }}</p>
 		<a class="btn btn-small" href="{{ entity.url }}">read online</a>
-		<div class="row"		
-		<div class="span3">
-		<hr />
-		</div>
-		</div>
 		</div>
 		</ul>
 <div class="row">

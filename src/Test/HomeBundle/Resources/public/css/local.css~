@@ -55,7 +55,7 @@ h1 {
 }
 
 #base.container {
-    width: 495px;
+    width: 595px;
     height: auto;
     margin:80px 0 80px 0;
     padding:0;
@@ -301,6 +301,7 @@ h1 {
       #push,
       #footer {
         height: 40px;
+
 }
 
       /* Lastly, apply responsive CSS fixes as necessary */
