@@ -1,6 +1,6 @@
 default:
     pattern:  /
-    defaults: { _controller: CoferHomeBundle:Default:index }
+    defaults: { _controller: TestHomeBundle:Default:index }
 
 test_contact:
     resource: "@TestContactBundle/Controller/"
