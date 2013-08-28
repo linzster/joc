@@ -1,4 +1,4 @@
-{# books index display page#}
+{# books index display page #}
 
 {% extends 'TestPublicationsBundle::layout.html.twig' %}
 
@@ -11,7 +11,7 @@
 <li>S</li>
 
 
-  {% endblock %}
+{% endblock %}
 
 
 {% block content -%}
@@ -19,6 +19,7 @@
 <div style="margin-left:-5px;" class="span6">
 
         {% for entity in entities %}
+
 <div class="span2">
 <ul class="grid cs-style-6">
     <li>
@@ -53,4 +54,5 @@
         </li>
     </ul>
 {% endif %}
+</div>
 {% endblock %}
