@@ -51,7 +51,6 @@ h1 {
 .img-polaroid {
 	margin-top:20px;
 	margin-left:10px;
-	height:50%;
 	width:50%;
 }
 #home {
@@ -141,7 +140,12 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
 
 .sidebar {
 	text-align: right;
-	padding-top:35%;
+	padding-top:10%;
+}
+
+.home {
+	position: absolute;
+	margin-top:33%;
 }
 
 #title {
