@@ -25,9 +25,9 @@
 		<a class="btn" href="{{ entity.link }}">View {{ entity.genre }}</a>
 		</div>
                 <h6>By {{ entity.author }}</h6>
- 		<p>{% if entity.dateCreated %}{{ entity.dateCreated|date ('F jS, o') }}{% endif %}</p>
+ 		<p>{% if entity.dateCreated %}{{ entity.dateCreated|date ('F jS, Y') }}{% endif %}</p>
                 <p>{<i>{{ entity.blurb }}</i>}</p>
-                <p>Posted on {% if entity.datePosted %}{{ entity.datePosted|date ('F jS, o') }}{% endif %}</p>
+                <p>Posted on {% if entity.datePosted %}{{ entity.datePosted|date ('F jS, Y') }}{% endif %}</p>
 <hr />
 </div>
 </ul>
