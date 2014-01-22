@@ -1,0 +1,40 @@
+{# profile index display page #}
+
+{% extends 'TestAboutBundle::layout.html.twig' %}
+
+{% block sidebar -%}
+
+    <li>A</li>
+    <li>B</li>
+    <li>O</li>
+    <li>U</li>
+    <li>T</li>
+
+
+
+{% endblock %}
+
+{% block content -%}
+
+    <div id="about">
+
+        <img class="img-polaroid pull-right" src="http://www.english.uga.edu/cwp/images_people/cofer_250_375.jpg" alt="JOC">
+
+        {% for entity in entities %}
+          <h3>News</h3>
+                <p><em>Posted on {% if entity.date %}{{ entity.date|date ('F jS, Y') }}{% endif %} </em></p>
+                <p>{{ entity.newsItem }}</p>
+        <hr />
+          <h3>Biography</h3>
+            <p>{{ entity.bio|nl2br}}</p>
+    </div>
+        <div class="row">
+            <div class="span2" style="padding-bottom:10px;padding-left:10px;">
+                {% if is_granted('ROLE_ADMIN') %}
+
+                    <a class="btn btn-warning" href="{{ path('profile_edit', { 'id': entity.id }) }}">Edit</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+{% endblock %}

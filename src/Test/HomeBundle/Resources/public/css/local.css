@@ -321,10 +321,10 @@ a.muted:focus {
   color: #f7f7f7;
 }
 
-@media (min-width: 768px) and (max-width: 979px) .base{
+@media (min-width: 768px) and (max-width: 979px) {
 
-max-width:979px;
-
+.base{
+    max-width:979px;
 }
-	
+}
 

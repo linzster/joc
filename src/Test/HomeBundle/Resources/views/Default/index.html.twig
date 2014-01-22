@@ -3,32 +3,31 @@
 {% block title -%}Cofer{% endblock %}
 
 {% block sidebar -%}
-
-            <ul class="nav">
- <li class="">
-                <a class="black" href="{{ path('test_home_default_index')}}">home</
-              </li>
-<li><a class="black" href="{{ path('test_about_default_index')}}">about</a></li>
- <li class="dropdown black">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">publications</a>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                            <li><a tabindex="-1" href="{{ path('books')}}">books</a></li>
-                            <li><a tabindex="-1" href="{{ path('poems')}}">poems</a></li>
-</ul>
-</li>
-	      <li><a href="{{ path('resource')}}">resources</a></li>
-	      <li><a href="{{ path('test_contact_default_index')}}">contact</a></li>
-              
-        </ul>
-    
-
-  {% endblock %}
+    <ul class="nav">
+        <li class="">
+            <a class="black" href="{{ path('test_home_default_index')}}">home</
+        </li>
+        <li>
+            <a class="black" href="{{ path('profile')}}">about</a>
+        </li>
+        <li class="dropdown black">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">publications</a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                    <li><a tabindex="-1" href="{{ path('books')}}">books</a></li>
+                    <li><a tabindex="-1" href="{{ path('poems')}}">poems</a></li>
+                </ul>
+        </li>
+	    <li><a href="{{ path('resource')}}">resources</a></li>
+	    <li><a href="{{ path('test_contact_default_index')}}">contact</a></li>
+    </ul>
+{% endblock %}
 
 {% block content -%}
 
-<p>Judith <br /> 
-Ortiz <br />
-Cofer <br /></p>
+    <p>Judith <br />
+        Ortiz <br />
+        Cofer <br />
+    </p>
 
 {% endblock %}
 

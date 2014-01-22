@@ -32,47 +32,25 @@
 
 <body id="home">
 
-
-<div class="container" id="center">
-
-{%if block('sidebar') %}  
-
-   <div class="home">
-
-   <div class="span2 sidebar">  
-
-    <ul class="nav nav-list" id="black">
-
-   {{block('sidebar')}}
-
-   </div>          
-
-   </div>
-{% else %}
-
-   {{block('body')}}
-
-
-{% endif %}
-
-<div class="span7">
-
-<div class="container" id="home">  
-
-<div id="title">
-
-   {% block content %}          
-
-   {% endblock %}                                          
-
-</div>
-</div>
-</div>
-
-
-
-</div>
-
+    <div class="container" id="center">
+        {%if block('sidebar') %}
+            <div class="home">
+            <div class="span2 sidebar">
+                <ul class="nav nav-list" id="black">
+                    {{block('sidebar')}}
+            </div>
+            </div>
+        {% else %}
+        {{block('body')}}
+        {% endif %}
+            <div class="span7">
+                <div class="container" id="home">
+                    <div id="title">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+    </div>
 </body>
 </html>
 

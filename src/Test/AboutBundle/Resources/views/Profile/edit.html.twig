@@ -1,0 +1,38 @@
+{# profile edit display page #}
+
+{% extends 'TestAboutBundle::layout.html.twig' %}
+
+{% block sidebar -%}
+
+    <li>A</li>
+    <li>B</li>
+    <li>O</li>
+    <li>U</li>
+    <li>T</li>
+
+
+
+{% endblock %}
+
+{% block content -%}
+
+    <div id="about">
+        <h1>Edit</h1>
+            <form action="{{ path('profile_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+                <input type="hidden" name="_method" value="PUT" />
+                    {{ form_widget(edit_form) }}
+        <div class="span12">
+            <div class="row">
+            <button class="btn btn-warning" type="submit">Save</button>
+            </form>
+            <a class="btn btn-success" href="{{ path('profile') }}">View</a>
+        </div>
+    </div>
+
+{% endblock %}
+
+{# <form action="{{ path('profile_delete', { 'id': entity.id }) }}" method="post">
+    <input type="hidden" name="_method" value="DELETE" />
+    {{ form_widget(delete_form) }}
+    <button class="btn btn-danger pull-right" style="display:inline;" type="submit">Delete</button>
+</form> #}
