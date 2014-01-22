@@ -35,10 +35,11 @@
     <div class="container" id="center">
         {%if block('sidebar') %}
             <div class="home">
-            <div class="span2 sidebar">
-                <ul class="nav nav-list" id="black">
-                    {{block('sidebar')}}
-            </div>
+                <div class="span2 sidebar">
+                    <ul class="nav nav-list" id="black">
+                        {{block('sidebar')}}
+                    </ul>
+                </div>
             </div>
         {% else %}
         {{block('body')}}
