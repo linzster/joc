@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Form
  *
- * @ORM\Table()
+ * @ORM\Table(name="form")
  * @ORM\Entity(repositoryClass="Test\ContactBundle\Entity\FormRepository")
  */
 class Form

@@ -22,12 +22,11 @@ class AppKernel extends Kernel
             new Test\HomeBundle\TestHomeBundle(),
             new Test\PagesBundle\TestPagesBundle(),
             new Test\UserBundle\TestUserBundle(),
-	    new FOS\UserBundle\FOSUserBundle(),
+	        new FOS\UserBundle\FOSUserBundle(),
             new Test\ContactBundle\TestContactBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

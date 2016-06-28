@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * CV
  *
- * @ORM\Table()
+ * @ORM\Table(name="cv")
  * @ORM\Entity(repositoryClass="Test\AboutBundle\Entity\CVRepository")
  */
 class CV
